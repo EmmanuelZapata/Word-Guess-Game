@@ -9,7 +9,7 @@ height: 200px;
 width: 80%;
 }
 
-.underscore {
+#underscore {
     border-width: 10px;
     border-style: double;
     border-color: cornflowerblue;
@@ -20,7 +20,7 @@ width: 80%;
     width: 80%;   
 }
 
-.right {
+#right {
 border-width: 10px;
 border-style: double;
 border-color: cornflowerblue;
@@ -31,7 +31,7 @@ height: 200px;
 width: 80%;
 }
 
-.wrong {
+#wrong {
 border-width: 10px;
 border-style: double;
 border-color: cornflowerblue;
