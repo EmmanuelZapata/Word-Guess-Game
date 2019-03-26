@@ -1,4 +1,5 @@
 //create array of words
+var word = ["taco", "burger", "pizza", "salad", "steak"];
 //choose random word from array
 //create underscores based on word choosen
 //get user guess
