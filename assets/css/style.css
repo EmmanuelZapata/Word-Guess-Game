@@ -9,3 +9,35 @@ height: 200px;
 width: 80%;
 }
 
+.underscore {
+    border-width: 10px;
+    border-style: double;
+    border-color: cornflowerblue;
+    font-size: 100px;
+    text-align: center;
+    margin: 10px auto;
+    height: 200px;
+    width: 80%;   
+}
+
+.right {
+border-width: 10px;
+border-style: double;
+border-color: cornflowerblue;
+font-size: 30px;
+text-align: center;
+margin: 10px auto;
+height: 200px;
+width: 80%;
+}
+
+.wrong {
+border-width: 10px;
+border-style: double;
+border-color: cornflowerblue;
+font-size: 30px;
+text-align: center;
+margin: 10px auto;
+height: 200px;
+width: 80%;
+}
