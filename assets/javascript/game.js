@@ -13,14 +13,14 @@ var letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n
 var word = ["taco", "burger", "pizza", "salad", "steak"];
 
 
+//functions
 
-//create array of words
-//choose random word from array
-// function words(){
-//     var word = ["taco", "burger", "pizza", "salad", "steak"];
-//     var random = [Math.floor(Math.random() * 5)];
-//     return word[random].split('')
-// };
+
+function words(){
+    var random = [Math.floor(Math.random() * 5)];
+    return word[random].split('')
+};
+displayWord.textContent = "Word: " + words();
 
 
 function callletters (pressedLetter){
