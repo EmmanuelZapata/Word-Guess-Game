@@ -9,7 +9,7 @@ height: 200px;
 width: 80%;
 }
 
-#underscore {
+#word {
     border-width: 10px;
     border-style: double;
     border-color: cornflowerblue;
@@ -20,7 +20,7 @@ width: 80%;
     width: 80%;   
 }
 
-#right {
+#win-text {
 border-width: 10px;
 border-style: double;
 border-color: cornflowerblue;
@@ -31,7 +31,7 @@ height: 200px;
 width: 80%;
 }
 
-#wrong {
+#guess-count {
 border-width: 10px;
 border-style: double;
 border-color: cornflowerblue;
@@ -41,3 +41,14 @@ margin: 10px auto;
 height: 200px;
 width: 80%;
 }
+
+#guesses-letters {
+    border-width: 10px;
+    border-style: double;
+    border-color: cornflowerblue;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px auto;
+    height: 200px;
+    width: 80%;
+    }
