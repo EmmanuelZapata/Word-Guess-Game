@@ -5,20 +5,15 @@ var winText = document.getElementById("losses");
 var guessCount = document.getElementById("guesses-count");
 var guessesLetters = document.getElementById("guesses-letters")
 
-// alphabet array and word arrays
+// alphabet array
 
-var letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"];
-
-
-
-
+var computerLetters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"];
+var userGuess = [];
 //functions
-
-
-// function word(){
-//     var random = [Math.floor(Math.random() * 5)];
-//     return word[random].split('')
-// };
+document.onkeyup = function(event) {
+    var random = [Math.floor(Math.random() * 5)];
+    return word[random].split('')
+};
 // displayWord.textContent = "Word: " + word();
 // const words = ["taco", "burger", "pizza", "salad", "steak"];
 // function chooseWord(array) {
