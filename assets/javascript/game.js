@@ -8,20 +8,35 @@ var guessesLeft = document.getElementById("guesses-left")
 
 // alphabet array and word arrays
 
-var letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"];
+// var letters = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"];
 
-var word = ["taco", "burger", "pizza", "salad", "steak"];
+// var words = ["taco", "burger", "pizza", "salad", "steak"];
 
 
 //functions
 
 
-function words(){
-    var random = [Math.floor(Math.random() * 5)];
-    return word[random].split('')
-};
-displayWord.textContent = "Word: " + words();
-
+// function word(){
+//     var random = [Math.floor(Math.random() * 5)];
+//     return word[random].split('')
+// };
+// displayWord.textContent = "Word: " + word();
+const words = ["taco", "burger", "pizza", "salad", "steak"];
+function chooseWord(array) {
+    return array[Math.floor(Math.random() * array.length)].toUpperCase()
+  }
+  
+  function blankWord(word) {
+    return word.replace(/w/g, '_')
+  }
+  
+  function fillInWordWithLetter(letter, word) {
+    return word.toLowerCase().split('').map(l =>  {
+      if (l === letter) {
+        return l.toUpperCase()
+      }
+      return '_'
+    }).join(' ')
 
 function callletters (pressedLetter){
 var isFound = false;
@@ -47,7 +62,7 @@ document.onkeyup = function(event){
 
 guessLetters.textContent = "Guessed Letters: " + userGuess;
 guessCount.textContent = "Guesses: " + pressedLetter;
-}
+}}
 
 
 
