@@ -22,24 +22,32 @@ var letters = [];
         document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letters.join(' ');
     }
 
-    
-    //Random letter choosen.  
+
+  
 document.onkeyup = function(event) {
+    //guesses left 
+    guessesLeft--;
     //userInput is made into a lowercase  
     var userInput = event.key.toLowerCase();
     console.log(userInput)
-
-    //if and else if statement on choices
-    if (userInput == computerChoice) {
-     //adds a win to win count
-      displayWins++;
-     alert('You gussed right! You Won!');
-     //reseting the guesses back to 9 so that the user can play again
-     guessesCount = 9; 
-     letters.length = 0;
-    }
-   
-};
+    //pushing letters
+	letters.push(userInput);
+	countGuessesLeft();
+	farUserGuesses();
+    // if user guesses right push win and restart
+	if (userInput === computerChoice){
+		wins++;
+		document.querySelector("#wins").innerHTML = "Wins: " + wins;
+		restart();
+    } 
+    
+    // if user guesses 0 they lose
+	else if (guessesLeft === 0) {
+		losses++;
+		document.querySelector("#lose").innerHTML = "Losses: " + losses;
+		restart();
+	}
+  }; 
 
 
 
