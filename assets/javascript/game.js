@@ -5,7 +5,7 @@ var letters = [];
 //Random letter choosen.  
 document.onkeyup = function(event) {
     //userInput is made into a lowercase  
-    var userInput = String(event.key).toLowerCase();
+    var userInput = event.key.toLowerCase();
     console.log()
     //computer makes a random choice from array
     var computerChoice = computerLetters[Math.floor(Math.random()*computerLetters.length)];
