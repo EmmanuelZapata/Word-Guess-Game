@@ -20,11 +20,14 @@ document.onkeyup = function(event) {
     var computerChoice = computerLetters[Math.floor(Math.random()*computerLetters.length)];
     
    //count guesses left
-   
+
     function countGuessesLeft() {
         document.querySelector("#guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
     }
-
+    // your guessses choosen
+    function farUserGuesses() {
+        document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letterUser.join(' ');
+    }
 
     
     //if and else if statement on choices
