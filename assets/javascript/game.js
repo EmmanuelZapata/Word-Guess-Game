@@ -9,13 +9,6 @@ var eachofLetters = null;
 var letters = [];
 
 //functions
-
-//Random letter choosen.  
-document.onkeyup = function(event) {
-    //userInput is made into a lowercase  
-    var userInput = event.key.toLowerCase();
-    console.log(userInput)
-
     //computer makes a random choice from array
     var computerChoice = computerLetters[Math.floor(Math.random()*computerLetters.length)];
     
@@ -30,6 +23,12 @@ document.onkeyup = function(event) {
     }
 
     
+    //Random letter choosen.  
+document.onkeyup = function(event) {
+    //userInput is made into a lowercase  
+    var userInput = event.key.toLowerCase();
+    console.log(userInput)
+
     //if and else if statement on choices
     if (userInput == computerChoice) {
      //adds a win to win count
