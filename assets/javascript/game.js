@@ -26,7 +26,7 @@ document.onkeyup = function(event) {
     }
     // your guessses choosen
     function farUserGuesses() {
-        document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letterUser.join(' ');
+        document.querySelector("#letter").innerHTML = "Your Guesses so far: " + letters.join(' ');
     }
 
     
