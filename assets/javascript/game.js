@@ -46,7 +46,14 @@ document.onkeyup = function(event) {
 		losses++;
 		document.querySelector("#lose").innerHTML = "Losses: " + losses;
 		restart();
-	}
+    }
+
+    //restart function
+    function restart(){
+        guessesLeft = 9;
+        letters = [];
+        var computerChoice = computerLetters[Math.floor(Math.random()*computerLetters.length)];
+    }
   }; 
 
 
