@@ -7,7 +7,8 @@ var losses = 0;
 var guessesLeft = 9;
 var eachofLetters = null;
 var letters = [];
-
+// checkes only letters not number that are lower case.
+let valid = /^[A-Za-z]+$/;
 //functions
     //computer makes a random choice from array
     var computerChoice = computerLetters[Math.floor(Math.random()*computerLetters.length)];
@@ -26,15 +27,20 @@ var letters = [];
   
 document.onkeyup = function(event) {
     //guesses left 
-    guessesLeft--;
-    //userInput is made into a lowercase  
-    var userInput = event.key.toLowerCase();
-    console.log(userInput)
-    //pushing letters
-	letters.push(userInput);
-	countGuessesLeft();
-	farUserGuesses();
-    // if user guesses right push win and restart
+    // guessesLeft--;
+    // userInput event.key
+
+    var userInput = event.key;
+    if (userInput.match(valid) && userInput.length === 1){
+        guessesLeft--;
+        console.log(userInput)
+            //pushing letters
+	        letters.push(userInput);
+	        countGuessesLeft();
+            farUserGuesses();
+
+            
+           // if user guesses right push win and restart
 	if (userInput === computerChoice){
 		wins++;
 		document.querySelector("#wins").innerHTML = "Wins: " + wins;
@@ -47,6 +53,30 @@ document.onkeyup = function(event) {
 		document.querySelector("#lose").innerHTML = "Losses: " + losses;
 		restart();
     }
+ 
+    else {
+        console.log("Not a Letter")
+    }
+    console.log(userInput)
+    
+    // //pushing letters
+	// letters.push(userInput);
+	// countGuessesLeft();
+	// farUserGuesses();
+    
+    // if user guesses right push win and restart
+	// if (userInput === computerChoice){
+	// 	wins++;
+	// 	document.querySelector("#wins").innerHTML = "Wins: " + wins;
+	// 	restart();
+    // } 
+    
+    // // if user guesses 0 they lose
+	// else if (guessesLeft === 0) {
+	// 	losses++;
+	// 	document.querySelector("#lose").innerHTML = "Losses: " + losses;
+	// 	restart();
+    // }
 
     //restart function
     function restart(){
@@ -54,7 +84,4 @@ document.onkeyup = function(event) {
         letters = [];
         var computerChoice = computerLetters[Math.floor(Math.random()*computerLetters.length)];
     }
-  }; 
-
-
-
+  }};
